@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<h3>Step 2: Create diagram</h3>
+
+
+<form th:object="${diagram}" method="POST">
+
+    <label>Element</label>
+    <select  name="element_id">
+        <option th:each="e1 : ${elements}"
+                th:text="${e1.elementName}"
+                th:value="${e1.id}"
+        >1</option>
+
+    </select>
+
+    <div>
+        <label>Diagram name</label>
+        <input type="text" th:field="${diagram.diagramName}" />
+    </div>
+
+    <button type="submit">Create</button>
+
+
+</form>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<h3>Step 1: Create element</h3>
+
+<form th:object="${element}" method="POST">
+    <div>
+        <label>Name</label>
+        <input type="text" th:field="${element.elementName}" />
+    </div>
+    <button type="submit">Create</button>
+</form>
+
+<span th:if="${elements.size() &gt; 0}">
+    <a href="/create/diagram">Create more diagrams</a>
+</span>
+
+
+</body>
+</html>
